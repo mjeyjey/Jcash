@@ -1,15 +1,35 @@
 
-<div th:fragment="navbar">
+<!-- <div th:fragment="navbar">
     <nav>
         <ul>
-              <li><a href="/dashboard">Home</a></li> 
+              <li><a href="/dashboard">Home</a></li>  -->
               <!-- <li><a href="/deposit">Deposit</a></li>
               <li><a href="/withdraw">Withdraw</a></li>
               <li><a href="/cashin">Cash In</a></li>
               <li><a href="/send">Send</a></li>
               <li><span style="color:grey;"> Bank Transfer (comming soon)</span></li> -->
-              <li><a href="/history">History</a></li> 
+              <!-- <li><a href="/history">History</a></li> 
               <li><a href="/settings">Settings</a></li> 
+        </ul>
+    </nav>
+    <hr>
+</div> -->
+
+
+<!-- File: fragments/navbar.html -->
+<div th:fragment="navbar">
+    <nav>
+        <ul>
+            <!-- Admin Navbar -->
+            <li th:if="${user != null and user.admin}"><a href="/admin_dashboard">User Records</a></li>
+            <li th:if="${user != null and user.admin}"><a href="/settings">Settings</a></li>
+            <li th:if="${user != null and user.admin}"><a href="/logout">Logout</a></li>
+
+            <!-- User Navbar -->
+            <li th:if="${user != null and !user.admin}"><a href="/dashboard">Home</a></li>
+            <li th:if="${user != null and !user.admin}"><a href="/transaction">History</a></li>
+            <li th:if="${user != null and !user.admin}"><a href="/settings">Settings</a></li>
+            <li th:if="${user != null and !user.admin}"><a href="/logout">Logout</a></li>
         </ul>
     </nav>
     <hr>
