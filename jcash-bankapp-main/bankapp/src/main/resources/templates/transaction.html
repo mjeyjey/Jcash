@@ -1,25 +1,4 @@
-<!-- <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Transaction History</title>
-</head>
-<body>
-
-<div th:replace="~{fragments/navbar :: navbar}"></div>
-
-<h2>Welcome, <span th:text="${username}">User</span>!</h2>
-<p>Your Current Balance: ₱<span th:text="${balance}">0.00</span></p>
-
-<h3>Transaction History</h3>
-<ul>
-    <li th:each="log : ${history}" th:text="${log}">No history yet.</li>
-</ul>
-
-</body>
-</html> -->
-
-
+<!-- 
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -33,6 +12,32 @@
     <li th:each="log : ${transaction}" th:text="${log}">No history yet.</li>
 </ul>
     <a href="/dashboard" style="display: inline-block; padding: 10px 16px; background-color: #0b5ed7; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">← Back to Home</a>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="/css/transaction.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body class="transaction-body">
+
+    <div th:replace="~{fragments/navbar :: navbar}"></div>
+
+    <div class="transaction-container">
+        <h3>Transaction History</h3>
+
+        <ul class="transaction-list">
+            <li th:each="log : ${transaction}" th:text="${log}">No history yet.</li>
+        </ul>
+
+        <a href="/dashboard" class="back-button">← Back to Home</a>
+    </div>
 
 </body>
 </html>
