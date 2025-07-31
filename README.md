@@ -3,7 +3,7 @@ JcashMOD is a beginner-friendly banking web application that simulates basic fin
 
 🚀 Features
   👤 User Registration and Login
-  
+   
   💰 Deposit, Withdraw, and Cash In
   
   🔁 Transfer Funds (with more options coming soon!)
