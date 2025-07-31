@@ -21,10 +21,9 @@ JcashMOD is a beginner-friendly banking web application that simulates basic fin
   
   HTML/CSS – Frontend structure and styling
 
-
 📌 Notes
   Bank Transfer is a planned feature and is marked as "coming soon"
-  
+
   User and transaction data are stored internally (no database required yet)
   
 👽 Author
